@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Page Title</title>
+    <!-- Include Fancybox CSS and JavaScript files -->
+    <link rel="stylesheet" href="path-to-fancybox/fancybox.min.css">
+    <script src="path-to-fancybox/fancybox.min.js"></script>
+</head>
+<body>
+
+<section class="page-title" style="background-image: url(images/background/SliderBanner.jpg);">
+    <div class="auto-container">
+        <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" class="play-now-two" data-fancybox data-caption="">
+            <i class="icon fa fa-play" aria-hidden="true"></i>
+            <span class="ripple"></span>
+        </a>
+    </div>
+</section>
+
+<script>
+    // Initialize Fancybox
+    $(document).ready(function () {
+        $('[data-fancybox]').fancybox({
+            type: 'iframe' // This tells Fancybox to treat the link as an iframe (for external content like YouTube videos)
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
