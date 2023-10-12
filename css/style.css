@@ -12453,6 +12453,6 @@ Sidebar
 
 @media (max-width: 575.98px) {
     .para{
-        text-align: justify;
+        text-align: left;
     }
 }
