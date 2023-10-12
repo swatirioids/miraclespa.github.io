@@ -12454,6 +12454,8 @@ Sidebar
 
 @media (max-width: 575.98px) {
     .para{
-        font-size: x-large;
+        font-size: 25px;
+        
+       font-weight: 900;
     }
 }
