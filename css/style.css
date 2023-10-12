@@ -12450,3 +12450,9 @@ Sidebar
     background-color: #fff;
     height: 180px;
 }
+
+@media (max-width: 575.98px) {
+    .para{
+        text-align: justify;
+    }
+}
