@@ -182,41 +182,30 @@
                             <h2>Feel free to write</h2>
                         </div>
                         <!-- Contact Form -->
-                        <form id="contact_form" name="contact_form" class="" method="post">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <input name="form_name" class="form-control" type="text" placeholder="Enter Name">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
-                                    </div>
+                        <!-- Contact Form -->
+                        <form id="contact_form"  name="contact_form" class="" method="post">
+                            <div class="col-sm-9">
+                                <div class="mb-3">
+                                    <input name="form_name" id="name" class="form-control" type="text" placeholder="Enter Name">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
-                                    </div>
+                            <div class="col-sm-9">
+                                <div class="mb-3">
+                                    <input name="form_email" id="email" class="form-control required email" type="email" placeholder="Enter Email">
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <textarea name="form_message" class="form-control required" rows="7" placeholder="Enter Message"></textarea>
+                            <div class="col-sm-9">
+                                <div class="mb-3">
+                                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                                </div>
                             </div>
-                            <div class="mb-5">
-                                <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                                <button type="submit" class="theme-btn btn-style-one" data-loading-text="Please wait..."><span class="btn-title">Send message</span></button>
-                                <button type="reset" class="theme-btn btn-style-one bg-theme-color5"><span class="btn-title">Reset</span></button>
-                            </div>
-                        </form>
-                        <!-- Contact Form Validation-->
+                        <div class="mb-5">
+                            <input name="form_botcheck" class="form-control" type="hidden" value="" />
+                            <button type="submit" class="theme-btn btn-style-one" data-loading-text="Please wait..."><span class="btn-title">Send message</span></button>
+                            <button type="reset" class="theme-btn btn-style-one bg-theme-color5"><span class="btn-title">Reset</span></button>
+                        </div>
+                    </form>
+                    <!-- Contact Form Validation-->
                     </div>
                     <div class="col-xl-5 col-lg-6">
                         <div class="contact-details__right">

@@ -12455,7 +12455,23 @@ Sidebar
 @media (max-width: 575.98px) {
     .para{
         font-size: 25px;
-        
-       font-weight: 900;
+        font-weight: 900;
     }
+    #video-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        margin-top: -150px;
+    }
+    
+}
+
+#video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+#video{
+    width: 100%;
+    height: 100%;
 }

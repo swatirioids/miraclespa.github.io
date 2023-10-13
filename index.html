@@ -246,36 +246,49 @@
             </div>
         </section>
         <!--Emd About Section -->
-
-        <!-- Start main-content -->
-        <section class="page-title" style="background-image: url(images/background/SliderBanner.jpg);">
-            <div class="auto-container">
-                <h2 style="color: #fff; text-align: center;" >Relax deeply, rejuvenate, and feel reborn!</h2>
-            <!-- <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" class="play-now-two" data-fancybox="gallery" data-caption=""> -->
-                </a>
-            </div>
-        </section>
-
-        <br>
-        <br>
-        <br>
-
-         <!-- food-section -->
-  <section class="food-section pt-0">
-    <div class="auto-container">
-      <div class="row">
-       
-      
-          <div class="inner-column" style="margin-top:-25rem; text-align: center;">
-            <a href="https://youtu.be/Y45vA94FIEA?si=VY1Vk8apNEI4oBbV" class="play-now-two" data-fancybox="gallery" data-caption=""> <i class="icon fa fa-play" aria-hidden="true" style="color: #fff; font-size: 60px;"></i> <span class="ripple"></span> </a>
-    </div>
-  </section>
-  <!-- End food section -->
+  <div id="video-container">
+    <video id="video" controls autoplay>
+        <source src="Miracle Spa.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
 
-        <div class="sec-title text-center wow fadeInUp"> <span class="sub-title">OUR SERVICES</span>
+
+<script>
+    const videoContainer = document.getElementById("video-container");
+    const video = document.getElementById("video");
+
+    // Function to request full-screen mode
+    function requestFullScreen() {
+        if (videoContainer.requestFullscreen) {
+            videoContainer.requestFullscreen();
+        } else if (videoContainer.mozRequestFullScreen) { // Firefox
+            videoContainer.mozRequestFullScreen();
+        } else if (videoContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+            videoContainer.webkitRequestFullscreen();
+        } else if (videoContainer.msRequestFullscreen) { // IE/Edge
+            videoContainer.msRequestFullscreen();
+        }
+    }
+
+    // Request full-screen mode when the page loads
+    requestFullScreen();
+
+    // Request full-screen mode when the page loads on mobile devices
+    if (window.innerWidth <= 768) {
+            requestFullScreen();
+        }
+</script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="sec-title text-center wow fadeInUp"> <span class="sub-title">OUR SERVICES</span>
             <h2>Miracle Spa Services</h2>
-        </div>
+</div>
 
         <!-- feature-section -->
   <section class="feature-section">
@@ -353,61 +366,7 @@
   </section>
   <!-- End feature section -->
 
-        <!-- food-section -->
-        <!-- <section class="food-section pt-0">
-            <div class="auto-container">
-                <div class="row">
-                    <div class="image-column col-xl-4 col-lg-4">
-                        <div class="inner-column">
-                            <div class="image-box">
-                                <figure class="image wow fadeInUp"><img src="images/about/about3.jpg" alt=""></figure>
-                            </div>
-                            <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" class="play-now-two" data-fancybox="gallery" data-caption=""> <i class="icon fa fa-play" aria-hidden="true"></i> <span class="ripple"></span> </a>
-                            <div class="quote-box">
-                                <div class="icon-box"><i class="flaticon-quotation"></i></div>
-                                <div class="text">Great hospitality is the key to Pride of Britain’s longstanding reputation for excellence.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-column col-xl-8">
-                        <div class="inner-column">
-                            <div class="sec-title"> <span class="sub-title">EAT FROM THE LAND</span>
-                                <h2>Enjoy Food and Even<br> Better Hospitality</h2>
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo <br> viverra maecenas accumsan lacus
-                                    vel facilisis. </div>
-                                <div class="healthy-food">
-                                    <div class="food-list">
-                                        <h4 class="title">Restaurant</h4>
-                                        <ul>
-                                            <li><i class="fa-regular fa-square-check"></i>Healthy Food</li>
-                                            <li><i class="fa-regular fa-square-check"></i>Award-winning Restaurant</li>
-                                            <li><i class="fa-regular fa-square-check"></i>Individually Styled Bedrooms</li>
-                                        </ul>
-                                    </div>
-                                    <div class="food-list two">
-                                        <h4 class="title">SPA & Wellness</h4>
-                                        <ul>
-                                            <li><i class="fa-regular fa-square-check"></i>Healthy Food</li>
-                                            <li><i class="fa-regular fa-square-check"></i>Award-winning Restaurant</li>
-                                            <li><i class="fa-regular fa-square-check"></i>Individually Styled Bedrooms</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="image-box">
-                                    <figure class="image overlay-anim"><img src="images/resource/food-list.jpg" alt=""></figure>
-                                    <figure class="image overlay-anim"><img src="images/resource/food-list-2.jpg" alt=""></figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- End food section -->
-
-        
-    
-        <!-- client-section -->
+    <!-- client-section -->
         <section class="client-section">
             <div class="bg bg-image" style="background-image: url(images/background/3.jpg);"></div>
             <div class="auto-container">
@@ -486,33 +445,21 @@
                         </div>
                         <!-- Contact Form -->
                         <form id="contact_form"  name="contact_form" class="" method="post">
-                            <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-9">
                                     <div class="mb-3">
                                         <input name="form_name" id="name" class="form-control" type="text" placeholder="Enter Name">
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-9">
                                     <div class="mb-3">
                                         <input name="form_email" id="email" class="form-control required email" type="email" placeholder="Enter Email">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-9">
                                     <div class="mb-3">
                                         <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="mb-3">
-                                <textarea name="form_message" class="form-control required" rows="7" placeholder="Enter Message"></textarea>
-                            </div>
                             <div class="mb-5">
                                 <input name="form_botcheck" class="form-control" type="hidden" value="" />
                                 <button type="submit" class="theme-btn btn-style-one" data-loading-text="Please wait..."><span class="btn-title">Send message</span></button>
@@ -592,22 +539,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- footer column -->
-                        <!-- <div class="footer-column col-lg-3 col-sm-6">
-                            <div class="footer-widget news-widget wow fadeInLeft" data-wow-delay="300ms">
-                                <h4 class="widget-title">Latest News</h4>
-                                <div class="news-info">
-                                    <figure class="image overlay-anim"><a href="#"><img src="images/resource/news-info-1.jpg" alt=""></a></figure>
-                                    <h6 class="title"><a href="#" title="">Quisque at Felis <br>Port Titordga</a></h6>
-                                    <span class="date">14 May 2023</span>
-                                </div>
-                                <div class="news-info">
-                                    <figure class="image overlay-anim"><a href="#"><img src="images/resource/news-info-2.jpg" alt=""></a></figure>
-                                    <h6 class="title"><a href="#" title="">Tips For Picking <br>Vacation</a></h6>
-                                    <span class="date">14 May 2023</span>
-                                </div>
-                            </div>
-                        </div> -->
                         <!-- Footer Column -->
                         <div class="footer-column col-lg-3 col-sm-6">
                             <div class="footer-widget blog-widget wow fadeInLeft" data-wow-delay="400ms">
