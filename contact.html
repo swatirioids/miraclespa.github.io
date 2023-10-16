@@ -19,7 +19,50 @@
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
+<style>
+    .popup {
+    display:none;
+    position: fixed;
+    top: 10rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 1000;
+}
 
+.popup-content {
+    background: #fff;
+    border-radius: 8px;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+</style>
 <body>
     <div class="page-wrapper">
 
@@ -183,27 +226,59 @@
                         </div>
                         <!-- Contact Form -->
                         <!-- Contact Form -->
-                        <form id="contact_form"  name="contact_form" class="" method="post">
+                        <form id="myForm" onsubmit="return submitForm()">
                             <div class="col-sm-9">
                                 <div class="mb-3">
-                                    <input name="form_name" id="name" class="form-control" type="text" placeholder="Enter Name">
+                                    <input name="form_name" id="name" class="form-control" type="text" placeholder="Enter Name" required>
                                 </div>
                             </div>
                             <div class="col-sm-9">
                                 <div class="mb-3">
-                                    <input name="form_email" id="email" class="form-control required email" type="email" placeholder="Enter Email">
+                                    <input name="form_email" id="email" class="form-control required email" type="email" placeholder="Enter Email" required>
                                 </div>
                             </div>
                             <div class="col-sm-9">
                                 <div class="mb-3">
-                                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                                    <input name="form_phone" id="phone" class="form-control" type="text" placeholder="Enter Phone" required>
                                 </div>
                             </div>
                         <div class="mb-5">
-                            <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                            <button type="submit" class="theme-btn btn-style-one" data-loading-text="Please wait..."><span class="btn-title">Send message</span></button>
+                            <input name="form_botcheck"  class="form-control" type="hidden" value="" />
+                            <button type="submit"  class="theme-btn btn-style-one"><span class="btn-title">Send message</span></button>
                             <button type="reset" class="theme-btn btn-style-one bg-theme-color5"><span class="btn-title">Reset</span></button>
                         </div>
+                        <div class="popup" id="successPopup">
+                            <div class="popup-content">
+                                <span class="close-btn" onclick="closePopup()">&times;</span>
+                                <h2>Thank you</h2>
+                                <p>Your form is successfully submitted! </p>
+                            </div>
+                        </div>
+                        <script>
+                            function showPopup() {
+                            var popup = document.getElementById('successPopup');
+                            popup.style.display = 'block';
+                        }
+
+                        function closePopup() {
+                        var popup = document.getElementById('successPopup');
+                        popup.style.display = 'none';
+                        }
+
+                        function submitForm() {
+                            showPopup();
+                            // Reset the form values.
+                        var form = document.getElementById('myForm');
+                        form.reset();
+
+                        return false; // Prevent the form from submitting.
+                        function closePopup() {
+                        console.log("Close button clicked");
+                        var popup = document.getElementById('successPopup');
+                        popup.style.display = 'none';
+                        }}
+                        </script>
+
                     </form>
                     <!-- Contact Form Validation-->
                     </div>
