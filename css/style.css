@@ -12463,7 +12463,6 @@ Sidebar
         height: 100vh;
         margin-top: -150px;
     }
-    
 }
 
 #video-container {
@@ -12474,4 +12473,13 @@ Sidebar
 #video{
     width: 100%;
     height: 100%;
+}
+
+.text1{
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--theme-color1);
+    text-align: justify; 
+    width: 35rem
 }
