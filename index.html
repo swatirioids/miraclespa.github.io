@@ -168,8 +168,7 @@
                     <div class="outer-box">
                         <figure class="image wow fadeInUp"><img src="images/background/b1 (3).jpg" alt=""></figure>
                         <div class="content-box">
-                            <span style="color: #fff;">The Luxury Of Relaxation
-                            </span>
+
                             <br>
                             <h1 data-animation-in="fadeInUp" data-delay-in="0.3">A Realm Of Pure 
                                 <br>Miracle And Bliss</h1>
@@ -181,10 +180,7 @@
                     <div class="outer-box">
                         <figure class="image wow fadeInUp"><img src="images/background/backgroud.jpg" alt=""></figure>
                         <div class="content-box">
-                            <span style="color: #fff;">At Miracle Spa</span>
-                            <br>
-                            <h1 data-animation-in="fadeInUp" data-delay-in="0.3">We invite you to experience 
-                                <br>the art of relaxation
+                            <h1 data-animation-in="fadeInUp" data-delay-in="0.3">Discover peace through blissful spa
                             </h1>
                             <a href="contact.html" class="btn" data-animation-in="fadeInUp" data-delay-in="0.5">Book Now</a>
                         </div>
@@ -194,10 +190,8 @@
                     <div class="outer-box">
                         <figure class="image wow fadeInUp"><img src="images/background/Slider6.jpg" alt=""></figure>
                         <div class="content-box">
-                            <span style="color: #fff;">A Healing Touch
-                            </span>
                             <br>
-                            <h1 data-animation-in="fadeInUp" data-delay-in="0.3">Nurture your body, soothe your soul<br>, and elevate your spirit at Miracle spa.</h1>
+                            <h1 data-animation-in="fadeInUp" data-delay-in="0.3">Escape to pure spa serenity</h1>
                             <a href="contact.html" class="btn" data-animation-in="fadeInUp" data-delay-in="0.5">Book Now</a>
                         </div>
                     </div>
@@ -444,20 +438,21 @@
                             </h2>
                         </div>
                         <!-- Contact Form -->
-                        <form id="contact_form"  name="contact_form" class="" method="post">
+                        <form id="myForm"  name="contact_form" class="" method="get">
                                 <div class="col-sm-9">
                                     <div class="mb-3">
-                                        <input name="form_name" id="name" class="form-control" type="text" placeholder="Enter Name">
+                                        <input name="form_name" id="name" class="form-control" type="text" placeholder="Enter Name" required>
+                                        <span id="nameError" class="error"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="mb-3">
-                                        <input name="form_email" id="email" class="form-control required email" type="email" placeholder="Enter Email">
+                                        <input name="form_email" id="email" class="form-control required email" type="email" placeholder="Enter Email" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="mb-3">
-                                        <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                                        <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone" required>
                                     </div>
                                 </div>
                             <div class="mb-5">
@@ -468,6 +463,21 @@
                         </form>
                         <!-- Contact Form Validation-->
                     </div>
+                    <script>
+                        document.getElementById('myForm').addEventListener('submit', function(event) {
+    const nameInput = document.getElementById('name');
+    const nameError = document.getElementById('nameError');
+    
+    // Check if the name field contains at least 2 characters
+    if (nameInput.value.length < 2) {
+        nameError.textContent = 'Name must be at least 2 characters long';
+        event.preventDefault(); // Prevent form submission
+    } else {
+        nameError.textContent = ''; // Clear the error message
+    }
+});
+
+                    </script>
                     <div class="col-xl-5 col-lg-6">
                         <div class="contact-details__right">
                             <div class="sec-title">
